@@ -75,5 +75,107 @@ And indeed, if you try to click on the method_1() line 6 like this:
 
 And then press the Ctrl+B shortcut, you'll get to the right definition:
 
-![](https://github.com/mostdevwill/java-vs-python/raw/master/gifs/go-to-copy.webp)
+![](gifs/go-to-copy.webp)
+
+That's right. But it doesn't make us to pass object of types exactly ExampleCopy.
+
+Now go back to the 11th line and let's change the type of the object back to Example:
+
+![img.png](pictures/back-example.png)
+
+You see, the IDE started complaining
+
+![img.png](pictures/ide-complaining.png)
+
+But it doesn't forbid us to pass the object of the "incorrect" type. Let's run it:
+
+![img.png](pictures/again-example.png)
+
+You see, it printed the Example's method, not the ExampleCopy's one.
+
+#### Conclusion
+
+Python provides you with such a construction which allows you to point the target type, 
+but it doesn't force you to pass the correct one.
+
+Is it bad? I would say it depends. But we're all humans, and we're prone to make mistakes and not to do work which is 
+not necessary. You have to force yourself to point the types and check whether everything 
+you're passing is correct. So you may miss this "unnecessary" part several times,
+which could lead you to bugs.
+
+### We can go even further
+
+If Python doesn't care about our types at all and it's not type safe, maybe there's a
+chance that it at least could stop us from invoking what we can't invoke? Like non-existing methods.
+
+Let's find out.
+
+Go to the 6th line and change the method you invoke on the object to method_3(), for example:
+
+![img.png](pictures/method-3.png)
+
+Notice that the IDE is complaining about the absence of the method:
+
+![img.png](pictures/no-method.png)
+
+But that's only a warning which won't stop us from running it. Let's run it:
+
+![img.png](pictures/no-method-result.png)
+
+Read it carefully. I want you to understand that it not just failed. It started and only then it failed.
+You see, there's the "I'm running" line which is printed in the very beginning of the program.
+
+By the way, if we remove that type from the 5th line, the IDE will stop complaining:
+
+![img.png](pictures/stops-complaining.png)
+
+#### Conclusion
+
+That's a small example, but extrapolate it on a large program, remember that there're "if" and "switch-case" 
+constructions, the way your program will be executed depends on several factors. So you can't check whether you're 
+doing something legal or illegal with just starting your program.
+
+Imagine the situation when your program is used by your customer and their clients and then it runs into such a bug, 
+fails and stops working. Your client is angry, you need to fix it as soon as possible, but you remember that the 
+program is quite big, right? So it'll be a challenge to find out what's wrong with it in a short time.
+
+---
+
+That was the example of working with a dynamically typed language like Python. The next one will show you exactly the 
+same example, but written in Java.
+
+---
+
+## Java project
+
+### Investigate the Java project
+
+Go to the Java Example directory.
+
+Take a look at the Example.java file.
+
+There's a class Example with a single method method_1() which prints Printing from the Example class
+
+Take a look at the ExampleCopy.py file
+
+There's a class ExampleCopy with a single method method_1() which prints Printing from the ExampleCopy class
+
+So it means that classes Example and ExampleCopy are the same with the only difference - their methods print slightly different things
+
+Take a look at the main.py file
+
+![img.png](pictures/python-main-construction.png)
+
+The 9th line is the starting point of the Python program
+
+The 10th line we're printing I'm running just to be sure that the program really starts
+
+The 11th line we create the object of class Example and call it example
+
+The 12th line we pass it to the run_method_1() method. Let's take a look at it
+
+![img.png](pictures/run-method-1-method.png)
+
+It works simply. It accepts our object and invokes method_1() on that object, which we've seen before
+
 
