@@ -15,10 +15,10 @@ Go to the Python Example directory.
 
 Take a look at the Example.py file.
 
-There's a class Example with a single method method_1() which prints Printing from the Example class.
+There's a class Example with a single method "method_1()" which prints Printing from the Example class.
 
 Take a look at the ExampleCopy.py file.
-There's a class ExampleCopy with a single method method_1() which prints Printing from the ExampleCopy class.
+There's a class ExampleCopy with a single method "method_1()" which prints Printing from the ExampleCopy class.
 
 So it means that classes Example and ExampleCopy are the same with the only difference - their methods print 
 slightly different things.
@@ -80,7 +80,7 @@ You see, both classes have methods with the same name.
 Python doesn't care about our types at all. You can't limit your methods to accept only objects of certain types. 
 If it has the method with the same signature - it'll work.
 
-Such a phenomenon is called a duck typing - "If it walks like a duck and it quacks like a duck, then it must be a duck".
+Such a phenomenon is called a duck typing - "If it walks like a duck, and it quacks like a duck, then it must be a duck".
 
 ### But we can limit the types
 
@@ -128,7 +128,7 @@ which could lead you to bugs.
 
 ### We can go even further
 
-If Python doesn't care about our types at all and it's not type safe, maybe there's a
+If Python doesn't care about our types at all, and it's not type safe, maybe there's a
 chance that it at least could stop us from invoking what we can't invoke? Like non-existing methods.
 
 Let's find out.
@@ -154,11 +154,11 @@ By the way, if we remove that type from the 5th line, the IDE will stop complain
 
 #### Conclusion
 
-That's a small example, but extrapolate it on a large program, remember that there're "if" and "switch-case" 
+That's a small example, but extrapolate it on a large program, remember that there are "if" and "switch-case" 
 constructions, the way your program will be executed depends on several factors. So you can't check whether you're 
 doing something legal or illegal with just starting your program.
 
-Imagine the situation when your program is used by your customer and their clients and then it runs into such a bug, 
+Imagine the situation when your program is used by your customer and their clients, and then it runs into such a bug, 
 fails and stops working. Your client is angry, you need to fix it as soon as possible, but you remember that the 
 program is quite big, right? So it'll be a challenge to find out what's wrong with it in a short time.
 
