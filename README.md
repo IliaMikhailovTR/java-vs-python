@@ -229,10 +229,11 @@ Open the terminal. I use the one which is integrated to the IDE. You can find it
 
 And type this command:
 
-cd Java\ Example/src/main/java/com/mostdevwill/javaexample/
-
+```shell
+cd java-example/src/main/java/com/mostdevwill/javaexample/
 javac Example.java ExampleCopy.java Main.java
 
+```
 And now read the error:
 
 ![img.png](pictures/java-error.png)
