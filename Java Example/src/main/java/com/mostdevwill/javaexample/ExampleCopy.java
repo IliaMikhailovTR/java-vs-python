@@ -1,10 +1,5 @@
 package com.mostdevwill.javaexample;
 
-
-
-
-
-
 public class ExampleCopy {
 
     void method1() {
