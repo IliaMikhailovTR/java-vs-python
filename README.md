@@ -217,7 +217,9 @@ But what's this error about then?
 Actually, running it you first initialized the process of generating .class files from your .java ones, 
 which then could be executed.
 
-If you're not familiar with it, watch my short videos about that:
+If you're not familiar with it, watch 
+[my short videos](https://www.instagram.com/mostdevwill/guide/java-inside/17953720976202376/?utm_source=ig_web_copy_link&utm_campaign=&utm_medium=) 
+about that.
 
 You may call it a compilation error (even though the term is not correct).
 
